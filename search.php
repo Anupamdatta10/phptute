@@ -1,8 +1,8 @@
 <?php
 session_start();
 include('./dbconn.php');
-$name=$_POST["name"];
-$phno=$_POST["phno"];
+$name=$_REQUEST["name"];
+$phno=$_REQUEST["phno"];
 
 $sql="select * from contact where name='$name' and ph_no='$phno'";
 $result=mysqli_query($conn, $sql);
